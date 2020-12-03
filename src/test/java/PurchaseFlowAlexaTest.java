@@ -1,10 +1,11 @@
+import configurations.BaseTest;
 import org.testng.annotations.Test;
 
-public class PurchaseFlowAlexaTest {
+public class PurchaseFlowAlexaTest extends BaseTest {
 
 
     @Test(description = "Purchase Flow Alexa in Amazon")
-    public void AlexaFlow(){
+    public void AlexaFlow() {
 
         System.out.println("Given a user navigates to www.amazon.com");
         System.out.println("And search for Alexa");
