@@ -4,7 +4,7 @@
 Clean and Install Maven Dependencies
 ------------------------------
 (project root)
-mvn clean install -DskipTest
+mvn clean install -DskipTests
 
 ---------------------------------
 Run a test 
