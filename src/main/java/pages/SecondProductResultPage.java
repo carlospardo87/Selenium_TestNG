@@ -25,11 +25,12 @@ public class SecondProductResultPage extends BasePage {
         sleepSecond(5);
 
         List<WebElement> elemList = driver.findElements(ITEM_LIST);
-        System.out.println("Number of elements:" +elemList.size());
 
-        for (int i=0; i<elemList.size();i++){
+        if (position > elemList.size()){
+            throw new RuntimeException("Element doesn't exist in the list");
+        }
+            for (int i=0; i<elemList.size();i++){
             if (i == position) {
-                System.out.println("Click item: "+i+" -- " + elemList.get(i).getAttribute("alt"));
                 elemList.get(i).click();
                 break;
             }
