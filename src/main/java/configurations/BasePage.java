@@ -41,9 +41,10 @@ public class BasePage {
     }
 
 
-    public void getText(By locator){
+    public String getText(By locator){
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        driver.findElement(locator).getText();
-    }
+       return driver.findElement(locator).getText();
+       }
+
 
 }
