@@ -27,4 +27,10 @@ public class BaseTest {
         }
     }
 
+
+    public void print(String textToPrint){
+        System.out.println(textToPrint);
+    }
+
+
 }
