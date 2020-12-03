@@ -22,29 +22,53 @@ public class BasePage {
         try {
             Thread.sleep(timeSeconds * 1000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
 
 
     public void enterText(By locator, String text){
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        driver.findElement(locator).clear();
-        driver.findElement(locator).sendKeys(text);
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            driver.findElement(locator).clear();
+            driver.findElement(locator).sendKeys(text);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 
 
     public void clickElement(By locator){
+        try {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         driver.findElement(locator).click();
+    } catch (Exception e) {
+            System.out.println(e.getMessage());
+    }
     }
 
 
     public String getText(By locator){
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-       return driver.findElement(locator).getText();
-       }
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            return driver.findElement(locator).getText();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
+
+    public Boolean isDisplayed(By locator){
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+    }
 
 
 }
