@@ -1,4 +1,4 @@
-# Kin + Carta code challenge
+# Selenium + TestNG
 
 ------------------------------
 Clean and Install Maven Dependencies
