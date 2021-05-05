@@ -10,6 +10,6 @@ mvn clean install -DskipTests
 Run a test 
 ---------------------------------
 (project root)
-mvn clean test
+mvn clean test -Dsuite=testng.xml
 
 

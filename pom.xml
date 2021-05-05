@@ -23,7 +23,7 @@
             <configuration>
                 <suiteXmlFiles>
                     <!--suppress UnresolvedMavenProperty -->
-                    <suiteXmlFile>${sources}</suiteXmlFile>
+                    <suiteXmlFile>${suite}</suiteXmlFile>
                 </suiteXmlFiles>
                 <testFailureIgnore>true</testFailureIgnore>
             </configuration>
